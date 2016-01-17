@@ -1,0 +1,9 @@
+{
+  "name": "nbaGoatListApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "1.4.28"
+  }
+}
