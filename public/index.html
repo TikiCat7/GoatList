@@ -28,6 +28,10 @@
   		left: 0;
   		visibility: hidden;
     }
+    .form-horizontal .form-group{
+      
+    }
+
 </style>
 
 <body id="page-top">
@@ -38,112 +42,104 @@
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#GOATList">Top GOAT Lists</a>
+                        <a class="page-scroll" href="#GOATList">Current Ranking</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#About">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Contact">Contact</a>
+                        <a class="page-scroll" href="#Contact" id="testing">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<form class="form-horizontal"role="form">
-	<div class="form-group"> 
-		<label class="control-label col-sm-1" for="choice1">Number 1 choice:</label>
-		<div class="col-sm-2">
+<h1>Submit your Goat List!</h1>
+<form class="form-horizontal"role="form" style="padding-left: 50px">
+  
+	<div class="form-group form-inline">
+		<label class="control-label" for="choice1">Number 1 choice:</label>
+  
+		<div class="controls">
 			<input type="text" class="form-control" id="choice1"  placeholder="Search player...">
     	</div>
-  	</div>
-
-  <div class="form-group">
-		<label class="control-label col-sm-1" for="choice2">Number 2 choice:</label>
-		<div class="col-sm-2">
-			<input type="text" class="form-control" id="choice2" placeholder="Search player...">
-    	</div>
-  	</div>
-
-  <div class="form-group">
-		<label class="control-label col-sm-1" for="choice3">Number 3 choice:</label>
-		<div class="col-sm-2">
-			<input type="text" class="form-control" id="choice3" placeholder="Search player...">
-    	</div>
-  	</div>
-
-  <div class="form-group">
-      <label class="control-label col-sm-1" for="ListName">Name your GOAT List:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="ListName" placeholder="Type here...">
-      </div>
-  </div>
-
-  <div class="form-group">
-  		<div class="col-sm-offset-1 col-sm-10">
-  		<button type="button" class="btn btn-default" id="submitGoat">Submit my GOAT</button>
-		</div>
-    
-    <div class="col-sm-offset-1 col-sm-10">
-      <button type="button" class="btn btn-default" id="clearDB">Clear DB</button>
     </div>
-  	</div>
+
+    <div class="form-group form-inline">
+    <label class="control-label" for="choice2">Number 2 choice:</label>
+  
+      <div class="controls form-inline">
+        <input type="text" class="form-control" id="choice2"  placeholder="Search player...">
+      </div>
+    </div>
+
+    <div class="form-group form-inline">
+    <label class="control-label" for="choice3">Number 3 choice:</label>
+  
+      <div class="controls">
+        <input type="text" class="form-control" id="choice3"  placeholder="Search player...">
+      </div>
+    </div>
+  
+    <!-- <div class="control-group">
+      <label class="control-label" for="ListName">Name your GOAT List:</label>
+      <div class="controls">
+        <input type="text" class="span04" id="ListName" placeholder="Type here...">
+      </div>
+  </div> -->
+  <div class="form-group form-inline">
+    <label class="control-label" for="ListName">Name your Goat List:</label>
+  
+    <div class="controls">
+      <input type="text" class="form-control" id="ListName"  placeholder="Type here...">
+      </div>
+    </div>
+
+
+  <div class="form-group form-inline" style="margin-top:10px">
+    <div class="controls">
+  		<button type="button" class="btn btn-default" id="submitGoat">Submit my GOAT</button>
+    </div>
+		</div>
+
+    <!-- <button class="btn btn-large btn-primary" type="button">Submit</button> -->
+  	
 </form>
 
-<div>
-<ul id="GoatList">
-	<li name ='number 1'>Jr.Smith</li>
-	<li name ='number 2'>Nate Robinson</li>
-	<li name ='number 3'>Kevin Garnet</li>
-</ul>
+<div id="rankingContent">
+  <h1>Current Rankings</h1>
+    <p id="tableStats"></p>
 </div>
 
-
-<div class="col-xs-2">
-<input type="text" name="choice1" class="form-control" placeholder="Choice#1..."> <br>
-</div>
-
-<div id="button">
-<button type="button" class="btn btn-default" aria-label="Left Align" id="UpdateList">
-WHOS ACTUALLY #1???
+<div class="section" id="dataSection">
+  <span id="MongoStuff" class="anchor"></span>
+  <h1>Mongo</h1>
+  <button type="button" class="btn btn-default" aria-label="Left Align" id="GetMongo">
+Show Collection in Mongo
 </button>
+<button type="button" class="btn btn-default" aria-label="Left Align" id="GetStats">
+Get Stats from Mongo
+</button>
+ <button type="button" class="btn btn-default" id="clearDB">
+  Clear DB</button>
+  <p id='mongostuff'></p>
+  
 </div>
-
-<br>
-<div id="results">
-  <h3>Submission Results</h3>
-<p id="showResults">
-</p>
-</div>
-
-<br>
 
 <div class="section">
-	<span id="About" class="anchor"></span>
-	<H1>About</H1>
-	<p>blahbalhblbahalhbalhb about about lajlskfjlk<br>
-		coijsdofijsodfjisodifjsoidfjsoidjfosidfjsoidjf</p>	
+  <span id="About" class="anchor"></span>
+  <H1>About</H1>
+  <p>blahbalhblbahalhbalhb about about lajlskfjlk<br>
+    coijsdofijsodfjisodifjsoidfjsoidjfosidfjsoidjf</p>  
 </div>
 </section>
 
 <div class="section">
-	<span id="Contact" class="anchor"></span>
-	<h1>Contact</h1>
-	<p>blahbalhblbahalhbalhb about about lajlskfjlk<br>
-		coijsdofijsodfjisodifjsoidfjsoidjfosidfjsoidjf</p>	
-</div>
-
-
-
-<div class="section">
-  <span id="MongoStuff" class="anchor"></span>
-  <h1>Mongo</h1>
-  <button type="button" class="btn btn-default" aria-label="Left Align" id="GetMongo">
-Get from Mongo
-</button>
-  <p id='mongostuff'></p>
-  
+  <span id="Contact" class="anchor"></span>
+  <h1>Contact</h1>
+  <p>blahbalhblbahalhbalhb about about lajlskfjlk<br>
+    coijsdofijsodfjisodifjsoidfjsoidjfosidfjsoidjf</p>  
 </div>
 
 
@@ -169,7 +165,6 @@ Get from Mongo
 
 </body>
 </html>
-
 
 <script src="jquery.js"></script>
 <script src="jquery-ui.min.js"></script>
