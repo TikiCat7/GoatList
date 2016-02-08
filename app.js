@@ -2,8 +2,9 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongojs = require('mongojs');
-var db = mongojs('nbapp',['nbapp']);
-var url = require('url');
+//var db = mongojs('nbapp',['nbapp']);  //for local version use this
+var mongoUri = process.env.MONGOLAB_URI || 'nbapp';
+var db = mongojs(mongoUri,['nbapp']);
 
 app.set('port', (process.env.PORT || 5000));
 
