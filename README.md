@@ -1,7 +1,10 @@
 # GoatList
-Goat List App to practice making a MEAN stack web app.
+Goat List App to practice making a MEN stack web app.
 
-Submit your top 10 all time NBA GOAT list.
+Submit your top 3 all time NBA GOAT list.
 
-NOT DONE BUT the concept is here
+Just for learning purpose. 
+The basic concept is here (post to db / reflect results on UI / no front end framework)
+finished sometime in February 2016 
+
 nbagoatlist.herokuapp.com
